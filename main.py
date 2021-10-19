@@ -8,7 +8,7 @@ import random
 
 def compare_plot(x1: np.ndarray, y1: np.ndarray, x2: np.ndarray, y2: np.ndarray, xlabel: str, ylabel: str,
                  title: str, label1: str, label2: str):
-    if x1.shape != y1.shape or np.min(x1.shape) == 0 or x2.shape != y2.shape or np.min(x2.shape) == 0:
+    if x1.shape != y1.shape or min(x1.shape) == 0 or x2.shape != y2.shape or min(x2.shape) == 0:
         return None
 
     fig, ax = plt.subplots()
@@ -22,7 +22,7 @@ def compare_plot(x1: np.ndarray, y1: np.ndarray, x2: np.ndarray, y2: np.ndarray,
 def parallel_plot(x1: np.ndarray, y1: np.ndarray, x2: np.ndarray, y2: np.ndarray,
                   x1label: str, y1label: str, x2label: str, y2label: str, title: str, orientation: str):
 
-    if x1.shape != y1.shape or np.min(x1.shape) == 0 or x2.shape != y2.shape or np.min(x2.shape) == 0:
+    if x1.shape != y1.shape or min(x1.shape) == 0 or x2.shape != y2.shape or min(x2.shape) == 0:
         return None
 
     if orientation == '-':
@@ -51,7 +51,7 @@ def parallel_plot(x1: np.ndarray, y1: np.ndarray, x2: np.ndarray, y2: np.ndarray
 
 def log_plot(x: np.ndarray, y: np.ndarray, xlabel: str, ylabel: str, title: str, log_axis: str):
 
-    if x.shape != y.shape or np.min(x.shape) == 0:
+    if x.shape != y.shape or min(x.shape) == 0:
         return None
 
     fig = plt.figure()

@@ -25,10 +25,10 @@ def parallel_plot(x1: np.ndarray, y1: np.ndarray, x2: np.ndarray, y2: np.ndarray
     if x1.shape != y1.shape or np.min(x1.shape) == 0 or x2.shape != y2.shape or np.min(x2.shape) == 0:
         return None
 
-    if orientation == 'v':
+    if orientation == '-':
         n = 2
         m = 1
-    elif orientation == 'h':
+    elif orientation == '|':
         n = 1
         m = 2
     else:
